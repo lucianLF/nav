@@ -16,6 +16,10 @@ jobs:
       uses: sergioramos/yarn-actions/install@v6
       with:
         frozen-lockfile: true
+    - name: set node versions
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
     - name: Build
       run: |
         npm run build
